@@ -1,0 +1,124 @@
+(I)Activity
+============
+1 WALKING
+2 WALKING_UPSTAIRS
+3 WALKING_DOWNSTAIRS
+4 SITTING
+5 STANDING
+6 LAYING
+
+(II) Subject
+======================
+1-30  for each of the 30 subjects 
+
+(III) Measurement
+
+THe new names of the measruement variables, after appropriately labels the data set with descriptive variable names. This is to make changes to the column names so that they become more human-readable. The various substitutions are made in the following:
+
+i) in the file data/UCI HAR Dataset/feature_info, it is written that " time domain signals (prefix 't' to denote time) and (Note the 'f' to indicate frequency domain signals). 
+Hence in column names starting with the letter "t", the letter "t" is replaced with the word TimeSignal, while in column names starting with the letter "f", the letter "f" is replaced with the word FrequencySignal
+
+ii)Other shorthand notations are substituted according as follows:
+
+mean becomes Mean
+std becomes StandardDeviation
+max becomes Maximum
+min becomes Minimum
+Mag becomes Magnitude
+Acc becomes Acceleration
+Gyro becomes AngularVelocity
+Freq becomes Frequency
+X becomes Xaxis
+Y becomes Yaxis
+Z becomes Zaxis
+BodyBody is reduced to Body
+() and - is redundant and taken out
+
+The new and old names of the measurement varaibles are as follows:
+
+Old Name			          New name
+==========			        ========
+tBodyAcc-mean()-X			            TimeSignalBodyAccelerationMeanXaxis
+tBodyAcc-mean()-Y			            TimeSignalBodyAccelerationMeanYaxis
+tBodyAcc-mean()-Z			            TimeSignalBodyAccelerationMeanZaxis
+tBodyAcc-std()-X			            TimeSignalBodyAccelerationStandardDeviationXaxis
+tBodyAcc-std()-Y			            TimeSignalBodyAccelerationStandardDeviationYaxis
+tBodyAcc-std()-Z		  	          TimeSignalBodyAccelerationStandardDeviationZaxis
+tGravityAcc-mean()-X		          TimeSignalGravityAccelerationMeanXaxis
+tGravityAcc-mean()-Y		          TimeSignalGravityAccelerationMeanYaxis
+tGravityAcc-mean()-Z		          TimeSignalGravityAccelerationMeanZaxis
+tGravityAcc-std()-X			          TimeSignalGravityAccelerationStandardDeviationXaxis
+tGravityAcc-std()-Y			          TimeSignalGravityAccelerationStandardDeviationYaxis
+tGravityAcc-std()-Z			          TimeSignalGravityAccelerationStandardDeviationZaxis
+tBodyAccJerk-mean()-X		          TimeSignalBodyAccelerationJerkMeanXaxis
+tBodyAccJerk-mean()-Y		          TimeSignalBodyAccelerationJerkMeanYaxis
+tBodyAccJerk-mean()-Z		          TimeSignalBodyAccelerationJerkMeanZaxis
+tBodyAccJerk-std()-X		          TimeSignalBodyAccelerationJerkStandardDeviationXaxis
+tBodyAccJerk-std()-Y		          TimeSignalBodyAccelerationJerkStandardDeviationYaxis
+tBodyAccJerk-std()-Z		          TimeSignalBodyAccelerationJerkStandardDeviationZaxis
+tBodyGyro-mean()-X		            TimeSignalBodyAngularVelocityMeanXaxis
+tBodyGyro-mean()-Y		            TimeSignalBodyAngularVelocityMeanYaxis
+tBodyGyro-mean()-Z	  	          TimeSignalBodyAngularVelocityMeanZaxis
+tBodyGyro-std()-X			            TimeSignalBodyAngularVelocityStandardDeviationXaxis
+tBodyGyro-std()-Y			            TimeSignalBodyAngularVelocityStandardDeviationYaxis
+tBodyGyro-std()-Z		  	          TimeSignalBodyAngularVelocityStandardDeviationZaxis
+tBodyGyroJerk-mean()-X	          TimeSignalBodyAngularVelocityJerkMeanXaxis
+tBodyGyroJerk-mean()-Y	          TimeSignalBodyAngularVelocityJerkMeanYaxis
+tBodyGyroJerk-mean()-Z	          TimeSignalBodyAngularVelocityJerkMeanZaxis
+tBodyGyroJerk-std()-X		          TimeSignalBodyAngularVelocityJerkStandardDeviationXaxis
+tBodyGyroJerk-std()-Y		          TimeSignalBodyAngularVelocityJerkStandardDeviationYaxis
+tBodyGyroJerk-std()-Z		          TimeSignalBodyAngularVelocityJerkStandardDeviationZaxis
+tBodyAccMag-mean()		            TimeSignalBodyAccelerationMagnitudeMean
+tBodyAccMag-std()			            TimeSignalBodyAccelerationMagnitudeStandardDeviation
+tGravityAccMag-mean()		          TimeSignalGravityAccelerationMagnitudeMean
+tGravityAccMag-std()		          TimeSignalGravityAccelerationMagnitudeStandardDeviation
+tBodyAccJerkMag-mean()	          TimeSignalBodyAccelerationJerkMagnitudeMean
+tBodyAccJerkMag-std()		          TimeSignalBodyAccelerationJerkMagnitudeStandardDeviation
+tBodyGyroMag-mean()		            TimeSignalBodyAngularVelocityMagnitudeMean
+tBodyGyroMag-std()		            TimeSignalBodyAngularVelocityMagnitudeStandardDeviation
+tBodyGyroJerkMag-mean()	          TimeSignalBodyAngularVelocityJerkMagnitudeMean
+tBodyGyroJerkMag-std()	          TimeSignalBodyAngularVelocityJerkMagnitudeStandardDeviation
+fBodyAcc-mean()-X			            FrequencySignalBodyAccelerationMeanXaxis
+fBodyAcc-mean()-Y			            FrequencySignalBodyAccelerationMeanYaxis
+fBodyAcc-mean()-Z			            FrequencySignalBodyAccelerationMeanZaxis
+fBodyAcc-std()-X			            FrequencySignalBodyAccelerationStandardDeviationXaxis
+fBodyAcc-std()-Y			            FrequencySignalBodyAccelerationStandardDeviationYaxis
+fBodyAcc-std()-Z			            FrequencySignalBodyAccelerationStandardDeviationZaxis
+fBodyAcc-meanFreq()-X		          FrequencySignalBodyAccelerationMeanFrequencyXaxis
+fBodyAcc-meanFreq()-Y		          FrequencySignalBodyAccelerationMeanFrequencyYaxis
+fBodyAcc-meanFreq()-Z		          FrequencySignalBodyAccelerationMeanFrequencyZaxis
+fBodyAccJerk-mean()-X		          FrequencySignalBodyAccelerationJerkMeanXaxis
+fBodyAccJerk-mean()-Y		          FrequencySignalBodyAccelerationJerkMeanYaxis
+fBodyAccJerk-mean()-Z		          FrequencySignalBodyAccelerationJerkMeanZaxis
+fBodyAccJerk-std()-X		          FrequencySignalBodyAccelerationJerkStandardDeviationXaxis
+fBodyAccJerk-std()-Y	          	FrequencySignalBodyAccelerationJerkStandardDeviationYaxis
+fBodyAccJerk-std()-Z		          FrequencySignalBodyAccelerationJerkStandardDeviationZaxis
+fBodyAccJerk-meanFreq()-X		      FrequencySignalBodyAccelerationJerkMeanFrequencyXaxis
+fBodyAccJerk-meanFreq()-Y		      FrequencySignalBodyAccelerationJerkMeanFrequencyYaxis
+fBodyAccJerk-meanFreq()-Z		      FrequencySignalBodyAccelerationJerkMeanFrequencyZaxis
+fBodyGyro-mean()-X		            FrequencySignalBodyAngularVelocityMeanXaxis
+fBodyGyro-mean()-Y		            FrequencySignalBodyAngularVelocityMeanYaxis
+fBodyGyro-mean()-Z		            FrequencySignalBodyAngularVelocityMeanZaxis
+fBodyGyro-std()-X			            FrequencySignalBodyAngularVelocityStandardDeviationXaxis
+fBodyGyro-std()-Y			            FrequencySignalBodyAngularVelocityStandardDeviationYaxis
+fBodyGyro-std()-Z		      	      FrequencySignalBodyAngularVelocityStandardDeviationZaxis
+fBodyGyro-meanFreq()-X	  	      FrequencySignalBodyAngularVelocityMeanFrequencyXaxis
+fBodyGyro-meanFreq()-Y	  	      FrequencySignalBodyAngularVelocityMeanFrequencyYaxis
+fBodyGyro-meanFreq()-Z		        FrequencySignalBodyAngularVelocityMeanFrequencyZaxis
+fBodyAccMag-mean()	      	      FrequencySignalBodyAccelerationMagnitudeMean
+fBodyAccMag-std()		      	      FrequencySignalBodyAccelerationMagnitudeStandardDeviation
+fBodyAccMag-meanFreq()	          FrequencySignalBodyAccelerationMagnitudeMeanFrequency
+fBodyBodyAccJerkMag-mean()	      FrequencySignalBodyAccelerationJerkMagnitudeMean
+fBodyBodyAccJerkMag-std()		      FrequencySignalBodyAccelerationJerkMagnitudeStandardDeviation
+fBodyBodyAccJerkMag-meanFreq()	  FrequencySignalBodyAccelerationJerkMagnitudeMeanFrequency
+fBodyBodyGyroMag-mean()	  	      FrequencySignalBodyAngularVelocityMagnitudeMean
+fBodyBodyGyroMag-std()	  	      FrequencySignalBodyAngularVelocityMagnitudeStandardDeviation
+fBodyBodyGyroMag-meanFreq()	      FrequencySignalBodyAngularVelocityMagnitudeMeanFrequency
+fBodyBodyGyroJerkMag-mean()     	FrequencySignalBodyAngularVelocityJerkMagnitudeMean
+fBodyBodyGyroJerkMag-std()	      FrequencySignalBodyAngularVelocityJerkMagnitudeStandardDeviation
+fBodyBodyGyroJerkMag-meanFreq()	  FrequencySignalBodyAngularVelocityJerkMagnitudeMeanFrequency
+
+
+
+
+
